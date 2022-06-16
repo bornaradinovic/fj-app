@@ -1,7 +1,6 @@
-console.log("asdasd");
 const mySiema = new Siema({
   selector: '.siema',
-  duration: 500,
+  duration: 2000,
   easing: 'ease-out',
   loop: true
 });
