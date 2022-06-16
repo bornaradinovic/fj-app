@@ -9,7 +9,6 @@
         padding-bottom: 60px;
       }
       .container {
-        display: grid;
         padding: 20px 40px;
       }
       h1 {
@@ -115,7 +114,7 @@
       .close {
         color: #aaaaaa;
         float: right;
-        font-size: 28px;
+        font-size: 30px;
         font-weight: bold;
       }
 
@@ -131,10 +130,31 @@
         text-decoration: underline;
         font-family: "Raleway", sans-serif;
         font-weight: 300;
-        font-size: 14px;
+        font-size: 16px;
         border: none;
         background: none;
         color: black;
+      }
+
+      @media only screen and (max-width: 700px) {
+        .modal-content {
+          width: auto;
+          max-width: 65%;
+        }
+
+        .contact {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: 475px) {
+        h1 {
+          font-size: 44px;
+        }
+
+        .close {
+          font-size: 25px;
+        }
       }
     </style>
     <title>Page Title</title>
@@ -148,6 +168,7 @@
       href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body class="container">
     <h1>Poezija puta i odredišta</h1>
@@ -208,17 +229,18 @@
         <!-- <span class="next"><i class="arrow right"></i></span> -->
       </div>
       <div class="contact">
-        <button id="myBtn" class="btn-contact">Kontakt slikarice? Pritisni tu!</button>
+        <button id="myBtn" class="btn-contact">
+          Kontakt slikarice? Pritisni tu!
+        </button>
       </div>
 
       <!-- The Modal -->
-      
     </div>
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <img src="https://i.imgur.com/zziBplf.png" class="contact">
+        <img src="https://i.imgur.com/zziBplf.png" class="contact" />
       </div>
     </div>
     <script src="siema.min.js"></script>
