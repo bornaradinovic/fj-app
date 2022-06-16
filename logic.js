@@ -6,7 +6,7 @@ const mySiema = new Siema({
 });
 // const prev = document.querySelector(".prev");
 // const next = document.querySelector(".next");
-// setInterval(() => mySiema.next(), 2000)
+setInterval(() => mySiema.next(), 2000)
 // prev.addEventListener("click", () => {
 //   mySiema.prev();
 // });
