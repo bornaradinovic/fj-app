@@ -3,7 +3,9 @@
   <head>
     <style>
       body {
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
       }
       .container {
         display: grid;
@@ -23,6 +25,40 @@
         font-size: 16px;
         font-family: "Raleway", sans-serif;
       }
+      .images {
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
+        align-items: center;
+      }
+      .arrow {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+
+      .left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+
+      .up {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+      }
+
+      .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+
+
+
     </style>
     <title>Page Title</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,10 +67,13 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap&subset=latin-ext" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
   </head>
   <body class="container">
-    <h1>Poezija puta i odredišta <span style="opacity: 0">žđ</span></h1>
+    <h1>Poezija puta i odredišta</h1>
     <div class="desc">
       <p>
         Ceste i puteljci jasan su sinonim putovanju i napretku, simbolom su
@@ -64,5 +103,38 @@
     <div class="painting-info">
       <p>Andrea Listeš, Magistra Slikarstva, Likovna Akademija Osijek, 2022</p>
     </div>
+    <div class="images">
+      <span class="prev"><i class="arrow left"></i></span>
+      <div class="siema">
+        <div>
+          <img
+            src="https://pawelgrzybek.github.io/siema/assets/siema--pink.svg"
+            alt="Siema image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://pawelgrzybek.github.io/siema/assets/siema--yellow.svg"
+            alt="Siema image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://pawelgrzybek.github.io/siema/assets/siema--pink.svg"
+            alt="Siema image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://pawelgrzybek.github.io/siema/assets/siema--yellow.svg"
+            alt="Siema image"
+          />
+        </div>
+      </div>
+      <span class="next"><i class="arrow right"></i></span>
+    </div>
+
+    <script src="siema.min.js"></script>
+    <script src="logic.js"></script>
   </body>
 </html>
