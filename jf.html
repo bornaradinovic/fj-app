@@ -6,6 +6,7 @@
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
           U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
           U+2212, U+2215, U+FEFF, U+FFFD;
+        padding-bottom: 60px;
       }
       .container {
         display: grid;
@@ -58,9 +59,10 @@
       }
 
       .image-container {
+        margin-top: 100px;
         width: 100%;
         max-width: 30rem;
-        margin: 0 auto;
+        margin: 40px auto;
       }
 
       img {
@@ -69,6 +71,69 @@
 
       .siema {
         margin: 1rem 0;
+      }
+
+      .content {
+        width: 100%;
+        /* display: grid; */
+
+        /* grid-template-columns: 1fr 1fr; */
+      }
+      .contact {
+        width: 500px;
+        cursor: pointer;
+        text-decoration: underline;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+      }
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        width: fit-content;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .btn-contact {
+        background-color: none;
+        text-decoration: underline;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        border: none;
+        background: none;
       }
     </style>
     <title>Page Title</title>
@@ -85,61 +150,76 @@
   </head>
   <body class="container">
     <h1>Poezija puta i odredišta</h1>
-    <div>
-      <div class="desc">
-        <p>
-          Ceste i puteljci jasan su sinonim putovanju i napretku, simbolom su
-          života i prosvjetljenja te ponekad potrebna količina asfalta kako
-          bismo pristigli milom odredištu.
-        </p>
-        <p>
-          Samotna cesta šarmantno vodi, a nerijetko i u nepoznatu avanturu.
-          Obratimo li bolje pozornost na krajolik uz nju, lako ćemo uočiti
-          ljepote i zanimljivosti. Te iste ceste se u nekim točkama zemljovida
-          nakupljaju, postaju brojnije, a poneke se i spajaju dok samoća
-          prestaje. Kada se one iz dva različita smjera spoje i poteku kao jedna
-          dobiju veći značaj. Taj spoj tada postaje ciljem, a potom početkom
-          daljnjeg putovanja. Sve te ceste kadikad imaju pratnju pokojeg visokog
-          stupa povrh kojeg strpljivo žari topla svjetlost odvažna rasvijetliti
-          trenutke putovanja. A kada su ceste gušće te što se više spajaju time
-          je i ustrajnih žaruljica sve više koje zajedničkim snagama uspiju
-          obasjati cijeli put i sve one puteljke koji se tek spremaju spojiti.
-          Tako putovanje postaje lakše i ugodnije.
-        </p>
-        <p>
-          Oni odvažni, koji otputuju na nešto udaljeniju povišu točku, mogu
-          sagledati sve te raznovrsne ceste i puteve svjetlosnih igara, ali i
-          odabrati nova odredišta.
-        </p>
-      </div>
-      <div class="painting-info">
-        <p>
-          Andrea Listeš, Magistra Slikarstva, Likovna Akademija Osijek, 2022
-        </p>
-      </div>
-    </div>
-    <div class="image-container">
-      <!-- <span class="prev"><i class="arrow left"></i></span> -->
-      <div class="siema">
-        <div>
-          <img src="https://i.imgur.com/mdndPSZ.jpeg" alt="Siema image" />
+    <div class="content">
+      <div>
+        <div class="desc">
+          <p>
+            Ceste i puteljci jasan su sinonim putovanju i napretku, simbolom su
+            života i prosvjetljenja te ponekad potrebna količina asfalta kako
+            bismo pristigli milom odredištu.
+          </p>
+          <p>
+            Samotna cesta šarmantno vodi, a nerijetko i u nepoznatu avanturu.
+            Obratimo li bolje pozornost na krajolik uz nju, lako ćemo uočiti
+            ljepote i zanimljivosti. Te iste ceste se u nekim točkama zemljovida
+            nakupljaju, postaju brojnije, a poneke se i spajaju dok samoća
+            prestaje. Kada se one iz dva različita smjera spoje i poteku kao
+            jedna dobiju veći značaj. Taj spoj tada postaje ciljem, a potom
+            početkom daljnjeg putovanja. Sve te ceste kadikad imaju pratnju
+            pokojeg visokog stupa povrh kojeg strpljivo žari topla svjetlost
+            odvažna rasvijetliti trenutke putovanja. A kada su ceste gušće te
+            što se više spajaju time je i ustrajnih žaruljica sve više koje
+            zajedničkim snagama uspiju obasjati cijeli put i sve one puteljke
+            koji se tek spremaju spojiti. Tako putovanje postaje lakše i
+            ugodnije.
+          </p>
+          <p>
+            Oni odvažni, koji otputuju na nešto udaljeniju povišu točku, mogu
+            sagledati sve te raznovrsne ceste i puteve svjetlosnih igara, ali i
+            odabrati nova odredišta.
+          </p>
         </div>
-        <div>
-          <img src="https://i.imgur.com/fGi5m5N.jpeg" alt="Siema image" />
-        </div>
-        <div>
-          <img src="https://i.imgur.com/PaYb9Mc.jpeg" alt="Siema image" />
-        </div>
-        <div>
-          <img src="https://i.imgur.com/kpBH6EC.jpeg" alt="Siema image" />
-        </div>
-        <div>
-          <img src="https://i.imgur.com/JR6ph8G.jpeg" alt="Siema image" />
+        <div class="painting-info">
+          <p>
+            Andrea Listeš, Magistra Slikarstva, Likovna Akademija Osijek, 2022
+          </p>
         </div>
       </div>
-      <!-- <span class="next"><i class="arrow right"></i></span> -->
-    </div>
+      <div class="image-container">
+        <!-- <span class="prev"><i class="arrow left"></i></span> -->
+        <div class="siema">
+          <div>
+            <img src="https://i.imgur.com/mdndPSZ.jpeg" alt="Siema image" />
+          </div>
+          <div>
+            <img src="https://i.imgur.com/fGi5m5N.jpeg" alt="Siema image" />
+          </div>
+          <div>
+            <img src="https://i.imgur.com/PaYb9Mc.jpeg" alt="Siema image" />
+          </div>
+          <div>
+            <img src="https://i.imgur.com/kpBH6EC.jpeg" alt="Siema image" />
+          </div>
+          <div>
+            <img src="https://i.imgur.com/JR6ph8G.jpeg" alt="Siema image" />
+          </div>
+        </div>
+        <!-- <span class="next"><i class="arrow right"></i></span> -->
+      </div>
+      <div class="contact">
+        <button id="myBtn" class="btn-contact">Kontakt slikarice? Pritisni tu!</button>
+      </div>
 
+      <!-- The Modal -->
+      
+    </div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="https://i.imgur.com/zziBplf.png" class="contact">
+      </div>
+    </div>
     <script src="siema.min.js"></script>
     <script src="logic.js"></script>
   </body>
